@@ -25,7 +25,21 @@ max-width: 750px;
 .card{
  width: 100%;
  height: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ font-family: 'Poppins', sans-serif;
+ font-weight: 900;
+ font-size: 125px;
  border-radius: 15px;
  background-color: rgb(42, 61, 68);
  box-shadow: 3px 10px 0px 0px rgba(0,0,0,0.75);
+ cursor: pointer;
+}
+.player_1{
+    color: rgb(152, 106, 167);
+}
+.player_2{
+    color: rgb(255, 213, 0);
 }
