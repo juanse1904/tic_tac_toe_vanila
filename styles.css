@@ -1,0 +1,31 @@
+*{
+margin:0;
+font-family: 'Wix Madefor Display', sans-serif;
+}
+body{
+background-color: rgb(86, 94, 96);
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.title_1{
+font-size: 60px;
+color:white;
+font-weight: 500;
+}
+.board{
+display:grid;
+grid-template-columns: repeat(3, 140px);
+grid-template-rows: repeat(3, 140px);
+row-gap: 15px;
+column-gap: 15px;
+width: auto;
+max-width: 750px;
+}
+.card{
+ width: 100%;
+ height: 100%;
+ border-radius: 15px;
+ background-color: rgb(42, 61, 68);
+ box-shadow: 3px 10px 0px 0px rgba(0,0,0,0.75);
+}
