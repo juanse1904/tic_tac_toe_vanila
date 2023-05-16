@@ -1,4 +1,9 @@
-import { exampleFunction } from "./utils.js";
+import { handleClick } from "./utils.js"
 
-const title = document.getElementsByClassName('title_1');
-exampleFunction(title[0]);
+
+const cards = document.getElementsByClassName("card");
+
+for (let i=0; i < cards.length; i++){
+    cards[i].addEventListener('click', () =>{ handleClick(cards[i])});
+}
+
