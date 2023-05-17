@@ -18,12 +18,12 @@ const winCombinations = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9]
 const players ={
     1: {
         element: player1,
-        className: 'player_1',
+        className: 'piece_1',
         counter: [],
     },
     2: {
         element: player2,
-        className: 'player_2',
+        className: 'piece_2',
         counter: [],
     },
 }
