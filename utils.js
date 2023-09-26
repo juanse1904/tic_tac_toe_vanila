@@ -3,10 +3,16 @@ import { winCombinations } from "./vars.js";
 import { messageContainer, cards, player1Score, player2Score } from "./rootElements.js";
 let player = 1;
 let winner = false;
+let clicks = 0;
 
 const winMessage = (playerNumber) => {
     const h2 = document.createElement("h2");
-    const content = document.createTextNode(`player ${playerNumber} WINS!!`);
+    let content;
+    if(playerNumber === 3){
+        content = document.createTextNode(`there is a deadHeat!`);
+    }else{
+        content = document.createTextNode(`player ${playerNumber} WINS!!`);
+    }
     h2.appendChild(content);
     messageContainer.insertBefore(h2, messageContainer.firstChild);
     messageContainer.classList.add('win_message_show');
@@ -86,17 +92,22 @@ function addPLayerClass(element){
 };
 
 function interventor(){
+    let playerWins;
 winCombinations.forEach((combination)=>{
     let verification = [];
     combination.forEach((position)=>{
         players[player].counter.includes(position)? verification.push(1) : verification.push(0);
-    })
-    if(verification.every((item)=> item === 1)){
+    });
+    playerWins = verification.every((item)=> item === 1);
+    if(playerWins){
         winMessage(player);
         addScore();
         winner= true;
     }
 })
+if(clicks === 9 && !playerWins){
+    winMessage(3);
+};
 };
 
 function addSymbol(card){    
@@ -104,6 +115,7 @@ function addSymbol(card){
 };
 
 export function handleClick(card){
+    clicks= clicks + 1;
     if(card.childNodes.length<=1 && !winner){
         addSymbol(card);
         players[player].counter.push(card.id*1);
