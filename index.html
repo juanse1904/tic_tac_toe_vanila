@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tic tac Toe by JSGT</title>
     <link rel="stylesheet" href="styles.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;800&display=swap" rel="stylesheet">
@@ -12,27 +12,50 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Wix+Madefor+Display:wght@400;500;800&display=swap" rel="stylesheet">
 </head>
     <body>
-        <h1 class="title_1">tic tac toe</h1>
-        <section class="board">
-            <article id="1" class="card" >
-            </article>
-            <article id="2" class="card" >
-            </article>
-            <article id="3" class="card" >
-            </article>
-            <article id="4" class="card" >
-            </article>
-            <article id="5" class="card" >
-            </article>
-            <article id="6" class="card" >
-            </article>
-            <article id="7" class="card" >
-            </article>
-            <article id="8" class="card" >
-            </article>
-            <article id="9" class="card" >
-            </article>
-        </section>
+        <main class="main_container">
+            <h1 class="title_1">tic tac toe</h1>
+            <section class="board">
+                <article id="1" class="card" >
+                </article>
+                <article id="2" class="card" >
+                </article>
+                <article id="3" class="card" >
+                </article>
+                <article id="4" class="card" >
+                </article>
+                <article id="5" class="card" >
+                </article>
+                <article id="6" class="card" >
+                </article>
+                <article id="7" class="card" >
+                </article>
+                <article id="8" class="card" >
+                </article>
+                <article id="9" class="card" >
+                </article>
+            </section>
+            <section class="win_message">
+                <div class="buttons_container">
+                    <button id="next_round_button">
+                        Next Round
+                    </button>
+                    <button id="finish_button">
+                        FInish
+                    </button>
+
+                </div>
+            </section>
+            <section class="counter">
+                <article class="counter_item player_1">
+                  <p>x</p>
+                  <span id="player_1_score"></span>
+                </article>
+                <article class="counter_item player_2">
+                    <p>o</p>
+                    <span id="player_2_score"></span>
+                </article>
+            </section>
+        </main>
     </body>
     <script type="module" src="index.js"></script>
 </html>
